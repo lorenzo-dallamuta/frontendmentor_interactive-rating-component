@@ -13,8 +13,8 @@ rating_buttons.forEach((n, i) => n.addEventListener('click', e => {
 }))
 
 submit_button.addEventListener('click', (e) => {
+  e.preventDefault()
   grade_result.innerText = rating.toString()
   modal.showModal()
   // do post stuff
-  e.preventDefault()
 })

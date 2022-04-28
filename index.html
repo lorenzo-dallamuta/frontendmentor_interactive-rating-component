@@ -9,41 +9,59 @@
   <title>Frontend Mentor | Interactive rating component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
-
+  <section class="wrapper">
   <!-- Rating state start -->
-
-  How did we do?
-
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
-
-  1 2 3 4 5
-
-  Submit
-
+    <form class="rate-box" method="post">
+      <div class="rate-box__icon-wrapper">
+        <object data="./images/icon-star.svg" type="image/svg+xml" class="rate-box__icon"></object>
+      </div>
+      <h2 class="rate-box__title">
+        How did we do?
+      </h2>
+      <p class="rate-box__question">
+        Please let us know how we did with your support request. All feedback is appreciated 
+        to help us improve our offering!
+      </p>
+      <ul class="rate-box__rating-list">
+        <li class="rate-box__rating">1</li>
+        <li class="rate-box__rating">2</li>
+        <li class="rate-box__rating">3</li>
+        <li class="rate-box__rating">4</li>
+        <li class="rate-box__rating">5</li>
+      </ul>
+      <button class="rate-box__submit" type="submit" disabled>Submit</button>
+    </form>
+  </section>
   <!-- Rating state end -->
 
+
   <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
+  <dialog class="result-box">
+    <div class="result-box__icon-wrapper">
+      <object data="./images/illustration-thank-you.svg" type="image/svg+xml" class="result-box__icon"></object>
+    </div>
+    <p class="result-box__grade">
+      You selected&nbsp;<span class="result-box__grade-number"></span>&nbsp;out of 5
+    </p>
+    <h2 class="result-box__title">
+      Thank you!
+    </h2>
+    <p class="result-box__text">
+      We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!
+    </p>
+  </dialog>
   <!-- Thank you state end -->
 
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Lorenzo Dalla Muta</a>.
   </div>
 </body>
 </html>
